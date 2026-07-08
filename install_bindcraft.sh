@@ -48,7 +48,7 @@ SECONDS=0
 install_dir=$(pwd)
 
 
-echo -e "${install_dir} this is the current dir"
+pwd
 tree
 kill
 
