@@ -45,6 +45,8 @@ echo -e "CUDA: $cuda"
 SECONDS=0
 
 # set paths needed for installation and check for conda installation
+echo -e '$(pwd) this is the current dir'
+tree
 install_dir=$(pwd)
 CONDA_BASE=$($pkg_manager info --base 2>/dev/null) || { echo -e "Error: conda is not installed or cannot be initialised."; exit 1; }
 echo -e "Conda is installed at: $CONDA_BASE"
