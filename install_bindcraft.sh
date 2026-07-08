@@ -52,7 +52,7 @@ echo -e "Conda is installed at: $CONDA_BASE"
 ### BindCraft install begin, create base environment
 echo -e "Installing BindCraft environment\n"
 $pkg_manager create --name BindCraft python=3.10 -y || { echo -e "Error: Failed to create BindCraft conda environment"; exit 1; }
-conda env list | grep -w 'BindCraft' >/dev/null 2>&1 || { echo -e "Error: Conda environment 'BindCraft' does not exist after creation."; exit 1; }
+$pkg_manager env list | grep -w 'BindCraft' >/dev/null 2>&1 || { echo -e "Error: Conda environment 'BindCraft' does not exist after creation."; exit 1; }
 
 # Load newly created BindCraft environment
 echo -e "Loading BindCraft environment\n"
@@ -84,7 +84,7 @@ missing_packages=()
 
 # Check each package
 for pkg in "${required_packages[@]}"; do
-    conda list "$pkg" | grep -w "$pkg" >/dev/null 2>&1 || missing_packages+=("$pkg")
+    $pkg_manager list "$pkg" | grep -w "$pkg" >/dev/null 2>&1 || missing_packages+=("$pkg")
 done
 
 # If any packages are missing, output error and exit
@@ -128,7 +128,7 @@ chmod +x "${install_dir}/functions/dssp" || { echo -e "Error: Failed to chmod ds
 chmod +x "${install_dir}/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
 
 # finish
-conda deactivate
+$pkg_manager deactivate
 echo -e "BindCraft environment set up\n"
 
 ############################################################################################################
