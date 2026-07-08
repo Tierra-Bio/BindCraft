@@ -122,6 +122,8 @@ tar -xvf "${params_file}" -C "${params_dir}" || { echo -e "Error: Failed to extr
 [ -f "${params_dir}/params_model_5_ptm.npz" ] || { echo -e "Error: Could not locate extracted AlphaFold2 weights"; exit 1; }
 rm "${params_file}" || { echo -e "Warning: Failed to remove AlphaFold2 weights archive"; }
 
+tree
+
 # chmod executables
 echo -e "Changing permissions for executables\n"
 chmod +x "${install_dir}/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
