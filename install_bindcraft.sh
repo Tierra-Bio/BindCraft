@@ -46,12 +46,6 @@ SECONDS=0
 
 # set paths needed for installation and check for conda installation
 install_dir=$(pwd)
-
-
-pwd
-tree
-kill
-
 CONDA_BASE=$($pkg_manager info --base 2>/dev/null) || { echo -e "Error: conda is not installed or cannot be initialised."; exit 1; }
 echo -e "Conda is installed at: $CONDA_BASE"
 
@@ -132,8 +126,8 @@ tree
 
 # chmod executables
 echo -e "Changing permissions for executables\n"
-chmod +x "${install_dir}/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
-chmod +x "${install_dir}/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
+# chmod +x "${install_dir}/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
+# chmod +x "${install_dir}/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
 
 # finish
 $pkg_manager deactivate
