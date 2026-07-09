@@ -238,6 +238,9 @@ def perform_advanced_settings_check(advanced_settings, bindcraft_folder):
         advanced_settings["dalphaball_path"] = '/content/bindcraft/functions/DAlphaBall.gcc'
     else:
         # Set paths individually if they are not already set
+
+        print(bindcraft_folder, 'hereeeeeee')
+
         if not advanced_settings["af_params_dir"]:
             advanced_settings["af_params_dir"] = bindcraft_folder
         if not advanced_settings["dssp_path"]:
