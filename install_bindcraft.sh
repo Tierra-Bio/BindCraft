@@ -128,8 +128,8 @@ tree
 
 # chmod executables
 echo -e "Changing permissions for executables\n"
-# chmod +x "BindCraft/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
-# chmod +x "BindCraft/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
+chmod +x "BindCraft/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
+chmod +x "BindCraft/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
 
 # finish
 # $pkg_manager deactivate
