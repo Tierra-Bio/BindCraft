@@ -130,7 +130,7 @@ chmod +x "BindCraft/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; 
 chmod +x "BindCraft/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
 
 # finish
-$pkg_manager deactivate
+# $pkg_manager deactivate
 echo -e "BindCraft environment set up\n"
 
 ############################################################################################################
