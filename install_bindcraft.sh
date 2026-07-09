@@ -55,10 +55,10 @@ $pkg_manager create --name BindCraft python=3.10 -y || { echo -e "Error: Failed 
 $pkg_manager env list | grep -w 'BindCraft' >/dev/null 2>&1 || { echo -e "Error: Conda environment 'BindCraft' does not exist after creation."; exit 1; }
 
 # Load newly created BindCraft environment
-echo -e "Loading BindCraft environment\n"
-source ${CONDA_BASE}/bin/activate ${CONDA_BASE}/envs/BindCraft || { echo -e "Error: Failed to activate the BindCraft environment."; exit 1; }
-[ "$CONDA_DEFAULT_ENV" = "BindCraft" ] || { echo -e "Error: The BindCraft environment is not active."; exit 1; }
-echo -e "BindCraft environment activated at ${CONDA_BASE}/envs/BindCraft"
+# echo -e "Loading BindCraft environment\n"
+# source ${CONDA_BASE}/bin/activate ${CONDA_BASE}/envs/BindCraft || { echo -e "Error: Failed to activate the BindCraft environment."; exit 1; }
+# [ "$CONDA_DEFAULT_ENV" = "BindCraft" ] || { echo -e "Error: The BindCraft environment is not active."; exit 1; }
+# echo -e "BindCraft environment activated at ${CONDA_BASE}/envs/BindCraft"
 
 # install required conda packages
 echo -e "Instaling conda requirements\n"
@@ -128,8 +128,8 @@ tree
 
 # chmod executables
 echo -e "Changing permissions for executables\n"
-chmod +x "BindCraft/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
-chmod +x "BindCraft/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
+# chmod +x "BindCraft/functions/dssp" || { echo -e "Error: Failed to chmod dssp"; exit 1; }
+# chmod +x "BindCraft/functions/DAlphaBall.gcc" || { echo -e "Error: Failed to chmod DAlphaBall.gcc"; exit 1; }
 
 # finish
 # $pkg_manager deactivate
