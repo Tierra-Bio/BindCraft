@@ -63,6 +63,7 @@ echo -e "BindCraft environment activated at ${CONDA_BASE}/envs/BindCraft"
 # install required conda packages
 echo -e "Instaling conda requirements\n"
 if [ -n "$cuda" ]; then
+  echo - e 'cuda look here'
   CONDA_OVERRIDE_CUDA="$cuda" $pkg_manager install \
     pip pandas matplotlib 'numpy<2.0.0' biopython scipy pdbfixer seaborn libgfortran5 tqdm jupyter ffmpeg fsspec py3dmol \
     chex dm-haiku 'flax<0.10.0' dm-tree joblib ml-collections immutabledict optax \
@@ -70,6 +71,7 @@ if [ -n "$cuda" ]; then
     -c conda-forge -c nvidia -y \
   || { echo -e "Error: Failed to install conda packages."; exit 1; }
 else
+  echo - e 'not cuda look here'
   $pkg_manager install \
     pip pandas matplotlib 'numpy<2.0.0' biopython scipy pdbfixer seaborn libgfortran5 tqdm jupyter ffmpeg fsspec py3dmol \
     chex dm-haiku 'flax<0.10.0' dm-tree joblib ml-collections immutabledict optax \
