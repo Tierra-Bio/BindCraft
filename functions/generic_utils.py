@@ -240,7 +240,7 @@ def perform_advanced_settings_check(advanced_settings, bindcraft_folder):
         # Set paths individually if they are not already set
 
         if not advanced_settings["af_params_dir"]:
-            advanced_settings["af_params_dir"] = os.path.join(bindcraft_folder, 'params')
+            advanced_settings["af_params_dir"] = os.path.join('params')
         if not advanced_settings["dssp_path"]:
             advanced_settings["dssp_path"] = os.path.join(bindcraft_folder, 'functions', 'dssp')
         if not advanced_settings["dalphaball_path"]:
