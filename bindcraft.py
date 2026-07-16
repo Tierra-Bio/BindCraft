@@ -53,18 +53,9 @@ failure_csv = os.path.join(target_settings["design_path"], 'failure_csv.csv')
 ### file path testing ###
 
 text_file_path = os.path.join(target_settings['design_path'], 'test.txt')
-updated_save = os.path.join('/design_outputs', 'test2.txt')
-
-print('design_paths', design_paths)
-print('final_csv', final_csv)
-print('text_file_path', text_file_path)
-print(updated_save)
 
 with open(text_file_path, 'w') as save_file:
     save_file.write('test_test_test_test')
-
-with open(updated_save, 'w') as save_file:
-    save_file.write('test 2 test 2')
 
 ### file path testing ###
 
