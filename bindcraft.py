@@ -2,6 +2,8 @@
 ###################### BindCraft Run
 ####################################
 ### Import dependencies
+import pandas
+
 from functions import *
 
 # Check if JAX-capable GPU is available, otherwise exit
@@ -47,6 +49,19 @@ trajectory_csv = os.path.join(target_settings["design_path"], 'trajectory_stats.
 mpnn_csv = os.path.join(target_settings["design_path"], 'mpnn_design_stats.csv')
 final_csv = os.path.join(target_settings["design_path"], 'final_design_stats.csv')
 failure_csv = os.path.join(target_settings["design_path"], 'failure_csv.csv')
+
+### file path testing ###
+
+text_file_path = os.path.join(target_settings['design_path'], 'test.txt')
+
+print('design_paths', design_paths)
+print('final_csv', final_csv)
+print('text_file_path', text_file_path)
+
+with open(text_file_path, 'w') as save_file:
+    save_file.write('test_test_test_test')
+
+### file path testing ###
 
 create_dataframe(trajectory_csv, trajectory_labels)
 create_dataframe(mpnn_csv, design_labels)
