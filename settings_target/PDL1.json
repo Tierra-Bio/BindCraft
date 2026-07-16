@@ -1,5 +1,5 @@
 {
-    "design_path": "design_outputs/PDL1/",
+    "design_path": "/design_outputs/PDL1/",
     "binder_name": "PDL1",
     "starting_pdb": "BindCraft/example/PDL1.pdb",
     "chains": "A",
